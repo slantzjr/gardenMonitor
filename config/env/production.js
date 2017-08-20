@@ -34,10 +34,4 @@ module.exports = {
   log: {
     level: "silent"
   },
-
-  session: {
-    adapter: 'connect-mongo',
-    url: process.env.MONGODB_URI
-  }
-
 };
