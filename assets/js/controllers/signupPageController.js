@@ -1,5 +1,5 @@
 angular.module('gardenMonitor').controller('signupPageController', ['$scope', '$http', 'toastr', function($scope, $http, toastr){
-
+  console.log('setting up signupform');
   // set-up loading state
   $scope.signupForm = {
     loading: false

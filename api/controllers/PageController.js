@@ -7,7 +7,7 @@
 
 module.exports = {
   showHomePage: function(req, res) {
-    console.log(req.session);
+    console.log('loading homepage');
     if (!req.session.userId) {
       return res.view('homepage', {
         me: {},
