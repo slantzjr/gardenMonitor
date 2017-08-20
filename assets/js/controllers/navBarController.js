@@ -2,7 +2,6 @@ angular.module('gardenMonitor').controller('navBarController', ['$location', '$s
 
   //Set-up loading state
   $scope.loginForm = {};
-  console.log('hitting navBarController');
   $scope.submitLoginForm = function() {
 
     // Set the loading state (i.e. show loading spinner)
