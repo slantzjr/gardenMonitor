@@ -64,6 +64,10 @@ module.exports.connections = {
   //   password: 'password', //optional
   //   database: 'your_mongo_db_name_here' //optional
   // },
+  productionMongo: {
+    adapter: 'sails-mongo',
+    url: process.env.MONGODB_URI
+  }
 
   /***************************************************************************
   *                                                                          *
