@@ -32,7 +32,7 @@ module.exports.policies = {
   },
 
   MeasurementController: {
-    create: ['isLoggedIn'],
+    create: ['isLoggedIn', 'isAdmin'],
   }
 
   /***************************************************************************
