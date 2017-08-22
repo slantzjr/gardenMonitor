@@ -1,6 +1,6 @@
-<div ng-controller="navBarController"
+<div ng-controller="navBarController" ng-cloak>
   <div class="navbar navbar-default">
-    <form ng-hide="<%= me.id %>" ng-submit="submitLoginForm()" class="navbar-form navbar-right">
+    <form ng-hide="<%= me.id != null %>" ng-submit="submitLoginForm()" class="navbar-form navbar-right">
       <div class="form-group">
         <input ng-model="loginForm.login" type="text" placeholder="email or username" name="login" class="form-control">
       </div>
@@ -15,7 +15,7 @@
       </button>
       <input type="hidden" ng-model="loginForm._csrf" name="_csrf" value="<%= _csrf %>" />
     </form>
-      <ul ng-show="<%= me.id %>" class="nav navbar-nav navbar-right">
+      <ul ng-show="<%= me.id != null %>" class="nav navbar-nav navbar-right">
         <li>
           <a class="btn btn-success" href="/logout">Sign Out</a>
         </li>
