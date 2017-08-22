@@ -65,7 +65,7 @@ module.exports = {
             options.email = req.param('email');
             options.username = req.param('username');
             options.encryptedPassword = result;
-            options.admin = true;
+            options.admin = false;
 
             User.create(options).exec(function(err, createdUser) {
               if (err) {
