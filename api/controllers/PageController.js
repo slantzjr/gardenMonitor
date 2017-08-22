@@ -19,7 +19,7 @@ module.exports = {
       if (!user) {
         sails.log.verbose('Session refers to a user that cannot be found.');
         return res.view('homepage', {
-            me: {},
+          me: {},
         });
       }
       return res.view('homepage', {
@@ -27,7 +27,7 @@ module.exports = {
           id: user.id,
           name: user.username,
         },
-        });
+      });
     });
   },
 

@@ -17,12 +17,12 @@ angular.module('gardenMonitor').controller('navBarController', ['$location', '$s
           password: $scope.loginForm.password,
           _csrf: data._csrf,
         },
-        {withCredentials: true},
+        {withCredentials: true}
       )
       .then(function onSuccess() {
         window.location = '/';
       })
-      .catch(function onError(sailsResponse) {
+      .catch(function onFailure(sailsResponse) {
 
         // Handle known error type(s).        
         // Deleted account
@@ -37,7 +37,6 @@ angular.module('gardenMonitor').controller('navBarController', ['$location', '$s
         // Invalid username / password combination.
         if (sailsResponse.status === 400 || 404) {
           // $scope.loginForm.topLevelErrorMessage = 'Invalid email/password combination.';
-          //
           toastr.error('Invalid email or username/password combination.', 'Error', {
             closeButton: true
           });

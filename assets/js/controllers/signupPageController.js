@@ -1,11 +1,10 @@
 angular.module('gardenMonitor').controller('signupPageController', ['$scope', '$http', 'toastr', function($scope, $http, toastr){
-  console.log('setting up signupform');
   // set-up loading state
   $scope.signupForm = {
     loading: false
   };
 
-  $scope.submitSignupForm = function(){
+  $scope.submitSignupForm = function() {
 
     // Set the loading state (i.e. show loading spinner)
     $scope.signupForm.loading = true;
@@ -31,7 +30,7 @@ angular.module('gardenMonitor').controller('signupPageController', ['$scope', '$
         // Handle unknown error type(s).
         $scope.signupForm.errorMsg = 'An unexpected error occurred: ' + (sailsResponse.data || sailsResponse.status);
       })
-      .finally(function eitherWay(){
+      .finally(function eitherWay() {
         $scope.signupForm.loading = false;
       });
     });
