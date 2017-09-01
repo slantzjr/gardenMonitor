@@ -25,7 +25,11 @@ module.exports = {
   },
 
   find: function(req, res) {
-    Measurement.find().exec(function(err, measurements){    
+    var oneWeekAgo = new Date();
+    oneWeekAgo.setDate(oneWeekAgo.getDate() - 5);
+    Measurement.find({ 
+      createdAt: { '>': new Date(oneWeekAgo) }
+    }).exec(function(err, measurements){    
       if (err) return res.negotiate(err);   
       return res.json(measurements);     
     });    

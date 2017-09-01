@@ -1,4 +1,4 @@
-angular.module('gardenMonitor', ['ngRoute', 'toastr', 'compareTo', 'ngPatternRestrict'])
+angular.module('gardenMonitor', ['ngRoute', 'toastr', 'compareTo', 'ngPatternRestrict', 'nvd3'])
   .config(['$routeProvider', function($routeProvider) {
 
   $routeProvider
