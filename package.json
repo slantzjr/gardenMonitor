@@ -4,6 +4,7 @@
   "description": "a Sails application",
   "engines": {
     "node": "6.11.1",
+    "npm": "5.3.0"
   },
   "keywords": [],
   "dependencies": {
