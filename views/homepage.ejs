@@ -3,6 +3,7 @@
     <h1 class="jumboHeading">Garden Monitor</h1>
     <div class="jumboSubHeading">
       <a ng-hide=<%= me.id != null %> href="/signup" class="btn btn-lg btn-success">Sign up now!</a>
+      <a ng-show=<%= me.id != null %> href="/measurementHistory" class="btn btn-lg btn-success">Measurement Logs</a>
     </div>
   </div>
 </div>
