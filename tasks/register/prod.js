@@ -16,7 +16,7 @@ module.exports = function(grunt) {
     'compileAssets',
     'concat',
     'cssmin',
-    // 'uglify',
+    'uglify',
     'sails-linker:prodJs',
     'sails-linker:prodStyles',
     'sails-linker:devTpl',
