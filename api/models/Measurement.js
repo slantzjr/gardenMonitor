@@ -12,14 +12,20 @@ module.exports = {
   },
 
   attributes: {
+    
+    hasWater: {
+      type: 'boolean',
+    },
 
+    lightIntensity: {
+      type: 'string',
+    },
+    
     temperature: {
       type: 'string',
     },
 
-    hasWater: {
-      type: 'boolean',
-    },
+
   }
 };
 

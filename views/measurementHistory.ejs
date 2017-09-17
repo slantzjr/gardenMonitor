@@ -3,14 +3,14 @@
     <h1 class="jumboHeading">Plant Monitor</h1>
   </div>
   <div ng-show=<%= me.id != null %>>
-    <div class="loading" ng-if="measurementsLoading">Loading measurements...</div>
-      <nvd3 
-        options="options"
-        data="data"
-        config="config"
-        events="events"
-        api="api"
-        on-ready="callback" />
+    <div class="loading" ng-if="measurementsLoading">
+      Loading measurements...
     </div>
+    <nvd3 
+      options="tempOptions"
+      data="tempData"></nvd3>
+    <nvd3 
+      options="lightOptions"
+      data="lightData"></nvd3>
   </div>
 </div>
