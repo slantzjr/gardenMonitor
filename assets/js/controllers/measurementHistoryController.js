@@ -29,7 +29,7 @@ angular.module('gardenMonitor').controller('measurementHistoryController', ['$lo
     },
     "subtitle": {
       "enable": true,
-      "text": "Last 7 days",
+      "text": "Last 5 days",
       "css": {
         "text-align": "center",
         "margin": ""
@@ -45,11 +45,8 @@ angular.module('gardenMonitor').controller('measurementHistoryController', ['$lo
     $scope.hasMeasurements = response.data.length > 0;
     var preppedData = [];
     if (response.data) {
-      // Hacky fix to get rid of test data until I can get around to making a filter.
-      response.data.splice(0, 15);
       var preppedData = response.data.map(
         function(point) {
-          console.log(new Date(point.createdAt).getTime());
           return {x: new Date(point.createdAt).getTime(), y: point.temperature};
         }
       );

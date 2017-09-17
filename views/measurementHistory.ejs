@@ -1,10 +1,9 @@
 <div ng-controller="measurementHistoryController" class=" col-md-8 col-md-offset-2" ng-cloak>
   <div class="jumbotron">
-    <h1 class="jumboHeading">PlantMonitor</h1>
-    <a ng-hide=<%= me.id != null %> href="/signup" class="btn btn-lg btn-success">Sign up now!</a>
+    <h1 class="jumboHeading">Plant Monitor</h1>
   </div>
   <div ng-show=<%= me.id != null %>>
-    <div class="loading"  ng-if="measurementsLoading">Loading measurements...</div>
+    <div class="loading" ng-if="measurementsLoading">Loading measurements...</div>
       <nvd3 
         options="options"
         data="data"

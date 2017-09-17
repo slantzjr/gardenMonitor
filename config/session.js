@@ -44,8 +44,8 @@ module.exports.session = {
   *                                                                          *
   ***************************************************************************/
 
-  adapter: 'redis',
-  url: process.env.REDISTOGO_URL
+  // adapter: 'redis',
+  // url: process.env.REDISTOGO_URL
 
   /***************************************************************************
   *                                                                          *

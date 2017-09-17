@@ -29,7 +29,7 @@ module.exports = {
     oneWeekAgo.setDate(oneWeekAgo.getDate() - 5);
     Measurement.find({ 
       createdAt: { '>': new Date(oneWeekAgo) }
-    }).exec(function(err, measurements){    
+    }).exec(function(err, measurements){
       if (err) return res.negotiate(err);   
       return res.json(measurements);     
     });    
