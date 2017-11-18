@@ -76,7 +76,7 @@ angular.module('gardenMonitor').controller('measurementHistoryController', ['$lo
   $scope.measurementsLoading = true;
   // Get the existing measurements.
   $http({method: 'GET', url: '/measurement'}).then(function whenServerResponds(response) {
-    $scope.measurementsLoading = false;
+    $scope.measurementsLoading = true;
     $scope.hasMeasurements = response.data.length > 0;
     var preppedTempData = [];
     var preppedLightData = [];
@@ -108,5 +108,6 @@ angular.module('gardenMonitor').controller('measurementHistoryController', ['$lo
         values: preppedLightData
       }];
     }
+    $scope.measurementsLoading = false;
   });
 }]);

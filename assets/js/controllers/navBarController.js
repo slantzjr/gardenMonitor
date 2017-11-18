@@ -20,7 +20,7 @@ angular.module('gardenMonitor').controller('navBarController', ['$location', '$s
         {withCredentials: true}
       )
       .then(function onSuccess() {
-        window.location = '/';
+        window.location = '/measurementHistory';
       })
       .catch(function onFailure(sailsResponse) {
 

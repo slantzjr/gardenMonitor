@@ -42,14 +42,18 @@ module.exports = {
 
   showMeasurementsPage: function(req, res) {
     if (!req.session.userId) {
-      return res.redirect('/');
+      return res.view('measurementHistory', {
+        me: {},
+      });
     }
     User.findOne(req.session.userId, function(err, user) {
       if (err) {
         res.negotiate(err);
       }
       if (!user) {
-        return res.redirect('/');
+        return res.view('measurementHistory', {
+          me: {},
+        });
       }
       return res.view('measurementHistory', {
         me: {
